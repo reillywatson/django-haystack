@@ -3,8 +3,8 @@
 from distutils.core import setup
 
 setup(
-    name='django-haystackcustom',
-    version='2.0.0-beta',
+    name='django-haystack',
+    version='2.0.0-betacustom',
     description='Pluggable search for Django.',
     author='Daniel Lindsley',
     author_email='daniel@toastdriven.com',
