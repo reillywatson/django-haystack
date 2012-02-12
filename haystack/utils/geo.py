@@ -1,8 +1,17 @@
-from django.contrib.gis.geos import Point
+#from django.contrib.gis.geos import Point
 from django.contrib.gis.measure import Distance, D
 from haystack.constants import WGS_84_SRID
 from haystack.exceptions import SpatialError
 
+
+class Point:
+	srid = WGS_84_SRID
+	geom_type = 'Point'
+	def __init__(self, lng, lat):
+		self.lat = lat
+		self.lng = lng
+	def get_coords(self):
+		return (self.lng,self.lat)
 
 def ensure_geometry(geom):
     """
